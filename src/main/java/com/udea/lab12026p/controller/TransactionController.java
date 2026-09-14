@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "*") // Permite peticiones desde el frontend
 @RestController
 @RequestMapping(value="/api/transactions", produces = "application/json")
 public class TransactionController {

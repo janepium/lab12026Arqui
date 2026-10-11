@@ -7,9 +7,10 @@ import com.udea.lab12026p.dto.TransactionDTO;
 import com.udea.lab12026p.service.CustomerService;
 import com.udea.lab12026p.service.TransactionService;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.ResponseEntity;
 
 import java.util.Collections;
@@ -18,7 +19,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-@SpringBootTest
+@ExtendWith(MockitoExtension.class)
 class Lab12026pApplicationTests {
 
 	@Mock
@@ -32,11 +33,6 @@ class Lab12026pApplicationTests {
 
 	@InjectMocks
 	private TransactionController transactionController;
-
-	@Test
-	void contextLoads() {
-		// Verifica que la aplicación levante correctamente
-	}
 
 	@Test
 	void testGetAllCustomers() {
@@ -72,7 +68,6 @@ class Lab12026pApplicationTests {
 
 	@Test
 	void testGetTransactionsByAccount() {
-		// "12345" es solo un texto simulado de prueba
 		when(transactionService.getTransactionsForAccount("12345")).thenReturn(Collections.emptyList());
 
 		List<TransactionDTO> result = transactionController.getTransactionsByAccount("12345");

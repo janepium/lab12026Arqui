@@ -6,6 +6,10 @@
 [![Maintainability issues](https://sonarcloud.io/api/project_badges/measure?project=janepium_lab12026Arqui&metric=software_quality_maintainability_issues)](https://sonarcloud.io/summary/new_code?id=janepium_lab12026Arqui)
 [![Reliability issues](https://sonarcloud.io/api/project_badges/measure?project=janepium_lab12026Arqui&metric=software_quality_reliability_issues)](https://sonarcloud.io/summary/new_code?id=janepium_lab12026Arqui)
 [![Security issues](https://sonarcloud.io/api/project_badges/measure?project=janepium_lab12026Arqui&metric=software_quality_security_issues)](https://sonarcloud.io/summary/new_code?id=janepium_lab12026Arqui)
+[![Coverage Status](https://coveralls.io/repos/github/janepium/lab12026Arqui/badge.svg)](https://coveralls.io/github/janepium/lab12026Arqui)
+
+# Laboratorio 12026Arqui - CI/CD Spring Boot
+
 
 Aplicación construida en Spring Boot 3 con Java 17, con un pipeline automatizado de Integración Continua y Despliegue Continuo (CI/CD) usando GitHub Actions, análisis de calidad con SonarCloud y empaquetado en contenedores Docker.
 

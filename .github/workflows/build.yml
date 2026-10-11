@@ -33,10 +33,10 @@ jobs:
       - name: Run Tests
         run: mvn -B test
 
-      - name: Coveralls Report
-        env:
-          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
-        run: mvn coveralls:report
+      - name: Coveralls GitHub Action
+        uses: coverallsapp/github-action@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
   # 2. Análisis con SonarCloud
   sonar:
